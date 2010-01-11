@@ -6,8 +6,8 @@ package {
 		public function Demo(){
 			
 			addChild($flash.load("http://farm3.static.flickr.com/2603/4198853411_73b1a0d780.jpg", {
-				x: 64,
-				y: 32,
+				x: stage.stageWidth/2,
+				y: stage.stageHeight/2,
 				success:function() {
 					trace("it loaded!");
 				},
@@ -17,6 +17,9 @@ package {
 				},
 				mouseMove: function() {
 					trace("the mouse is a movin'");
+				},
+				enterFrame: function() {
+					this.rotation+=Math.PI*2;
 				}
 				
 			}));

@@ -33,7 +33,8 @@ package {
 		    rollOver: "rollOver",
 		    tabChildrenChange: "tabChildrenChange",
 		    tabEnabledChange: "tabEnabledChange",
-		    tabIndexChange: "tabIndexChange"
+		    tabIndexChange: "tabIndexChange",
+		    enterFrame: "enterFrame"
 		}
 				
 		
@@ -62,7 +63,7 @@ package {
 					if ($flash.events[i] != null) {
 						(function() {
 							var func = funcs[i];
-							targ.addEventListener(i, function(e) {$flash.e = e; func&&func()})
+							targ.addEventListener(i, function(e) {$flash.e = e; func&&func.apply(targ)})
 						})();
 					}
 				}
