@@ -1,0 +1,7 @@
+=== $flash ===
+Simplifying the Flash API using modern JavaScript ideas (A work in progress)
+
+
+// BUGS //
+
+Enable easy removal of event handlers.
